@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+    <!-- 
+    Skillzam - Learn without limits
+    Email: info@skillzam.com
+    Phone: +91-80500-80399
+    Web: www.skillzam.com
+    -->
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>JavaScript Decisions - Conditionals</title>
+</head>
+<body>
+    <h1>JavaScript Decisions - Conditionals</h1>
+
+    <script>
+
+        /************************************************/
+        // JavaScript  IF statement : Find the number is EVEN or ODD
+        let randNum = Math.floor(Math.random() * 100);  
+        console.log(randNum);
+        let randMod = randNum % 2;
+        console.log(randMod);  
+        if (randMod === 0) {
+            console.log("The number is EVEN.");
+        } 
+        if (randMod !== 0) {
+            console.log("The number is ODD.");
+        }
+     
+
+        /************************************************/    
+        //JavaScript  IF/ELSE statement : Find the number is EVEN or ODD
+        let ranNum = Math.floor(Math.random() * 100);
+        let ranMod = ranNum % 2;
+        if (ranMod === 0) {
+            console.log("The number is EVEN.");
+        } else {
+            console.log("The number is ODD.");
+        }
+        console.log(ranMod);
+        console.log(ranNum);
+        
+
+        /************************************************/
+        // JavaScript  IF/  ELSE IF /ELSE  statement : Programming Language Example
+        const progLang = prompt('Enter the programming language').toLowerCase();
+        if (progLang === 'javascript') {
+            console.log("I like JavaScript! Can create wonders...")
+        } else if (progLang === 'python') {
+            console.log("I love Python! DataScience loves it too.")
+        } else if (progLang === 'html') {
+            console.log("HTML! It is so fun.")
+        } else {
+            console.log("Oh! I am yet to learn it.")
+        }
+        
+
+        /************************************************/
+        // JavaScript  IF/  ELSE IF /ELSE  statement :
+        // Example of Rewarding the good performing students 
+        //
+        // 0-49 - Unsatisfactory ₹0
+        // 50 - 59 - Fair ₹6000
+        // 60 - 69 - Good ₹6000
+        // 70 - 79 - Very Good ₹8000
+        // 80 - 89 - Excellent ₹8000
+        // 90 - 100 - Outstanding ₹10000 
+        const score = 67; // Input score - (Change here)
+        if (score < 50) {
+            console.log("Perform Well. Keep your spirits high!");
+        } else if (score < 60) {
+            console.log("You are rewarded ₹6000");
+        } else if (score < 70) {
+            console.log("You are rewarded ₹6000");
+        } else if (score < 80) {
+            console.log("You are rewarded ₹8000");
+        } else if (score < 90) {
+            console.log("You are rewarded ₹8000");
+        } else {
+            console.log("You are rewarded ₹10000");
+        }
+
+
+        /************************************************/    
+        // JavaScript Nesting Conditionals : Wonderword Example
+        const wonderWord = prompt("Enter your Wonderword");
+        // Wonderword must be minimum 9 characters
+        if (wonderWord.length >= 9) {
+        // Wonderword cannot include SPACES
+            if (wonderWord.indexOf(' ') === -1) {
+                console.log("Perfect Wonderword!");
+            } else {
+                console.log("Wonderword cannot contain SPACES!")
+            }
+        } else {
+            console.log("Wonderword is too short! Must be minimum 9 characters")
+        }
+
+    </script>
+
+</body>
+</html>

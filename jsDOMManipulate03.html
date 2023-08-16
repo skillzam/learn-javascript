@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en-us">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shopping Cart Example</title>
+    <style>
+        label {
+            font-size: 20px;
+        }
+        .addBtn{
+            font-size: 16px;
+            margin-left: 20px;
+            background-color: #004AED;
+            color: white;
+            padding: 5px;
+            border: 2px solid #004AED;
+            border-radius: 3px;
+        }
+        ul {
+          background-color: lightskyblue;
+          width: 50%;
+          border-radius: 3px;
+        }
+        li {
+            margin-bottom: 10px;
+            list-style-type:none;
+        }
+
+        li button {
+            font-size: 12px;
+            margin-left: 20px;
+            background-color: #004AED;
+            color: white;
+            padding: 3px;
+            margin: 5px;
+            border: 2px solid #004AED;
+            border-radius: 3px;
+        }
+
+    </style>
+  </head>
+  <body>
+
+    <h1>Shopping Cart: </h1>
+
+    <div>
+      <label for="item">Enter the shopping item:</label>
+      <input type="text" name="item" id="item">
+      <button class="addBtn">Add item</button>
+    </div>
+
+    <ul>
+    </ul>
+
+    <script>
+      const list = document.querySelector('ul');
+      const input = document.querySelector('input');
+      const button = document.querySelector('button');
+
+      button.addEventListener('click', () => {
+        const myItem = input.value;
+        input.value = '';
+
+        const listItem = document.createElement('li'); // <li></li>
+        const listText = document.createElement('span'); // <span></span>
+        const listBtn = document.createElement('button'); // <button></button>
+
+        listItem.appendChild(listBtn); // <li><button></button></li>
+        listBtn.textContent = 'Delete'; // <li><button>Delete</button></li>
+        listItem.appendChild(listText); // <li><button>Delete</button><span></span></li>
+        listText.textContent = myItem; // <li><button>Delete</button><span>myItem</span></li>
+        list.appendChild(listItem); // <ul><li><button>Delete</button><span>myItem</span></li></ul>
+
+        listBtn.addEventListener('click', () => {
+          list.removeChild(listItem);
+        });
+
+        input.focus();
+      });
+    </script>
+  </body>
+</html>

@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+    <!-- 
+    Skillzam - Learn without limits
+    Email: info@skillzam.com
+    Phone: +91-80500-80399
+    Web: www.skillzam.com
+    -->
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+    <title>Demo JavaScript primitive Data Types</title>
+  </head>  
+
+    <style>
+      h2 {
+        font-size: 80px;
+      }
+      p {
+        font-size: 40px;
+      }
+    </style>
+
+<body>
+    <!--
+    > Data types describe the different types or kinds of data that we're gonna be working with and storing in variables. 
+      In JS, there are five basic, or primitive, types of data : 
+        - string : is a collection of alphanumeric characters within a double quotes or single quotes or Backticks
+            Double quotes: "Skillzam"
+            Single quotes: 'Skillzam'
+            Backticks:     `Skillzam`
+            Backticks are “extended functionality” quotes. (String Literals)
+            They allow us to embed variables and expressions into a string by wrapping them in ${…}
+
+        - number : The number type represents both integer and floating point numbers.
+            Besides regular numbers, there are also “special numeric values” 
+            which also belong to this data type: 
+                Infinity : represents the mathematical Infinity ∞
+                -Infinity : represents the mathematical negative Infinity -∞
+                NaN : NaN represents a computational error ( not a number)
+                      It is a result of an incorrect or an undefined mathematical operation
+                      NaN is sticky. Any further mathematical operation on NaN returns NaN
+
+        - boolean : The boolean type has only two values: true and false.
+                     Boolean values also come as a result of comparisons
+
+        - undefined : The meaning of undefined is “value is not assigned”.
+                      it is possible to explicitly assign undefined to a variable  
+        
+        - null : The special null value does not belong to any of the ty  ove.
+                 It forms a separate type of its own which contains only the null value
+                 It’s just a special value which represents “nothing”, “empty” or “value unknown”
+    
+        - BigInt : The “number” type cannot safely represent integer values larger than (2**53-1) (that’s 9007199254740991), 
+               or less than -(2**53-1) for negatives.
+               BigInt type was recently added to the language to represent integers of arbitrary length
+               BigInt value is created by appending n to the end of an integer
+
+        - Symbol : is a primitive datatype which represents a unique "hidden" identifier that no other code can accidentally access.
+               Suppose if different developers want to add a player.uid property to a player object belonging to a third-party code, they could mix each others values.
+               Using Symbol() to create a unique identifiers, solves this problem.
+
+    > When adding a number and a string, JavaScript will treat the number as a string.        
+    
+    > JavaScript evaluates expressions from left to right. 
+      Different sequences can produce different results
+    
+    > "typeof" operator allows us to see which type is stored in a variable
+      Usually used as typeof x, but typeof(x) is also possible.  
+
+    -->
+
+    <h2>Demo JavaScript primitive Data Types</h2>
+
+    <p id="id1"></p>
+    <p id="id2"></p>
+    <p id="id3"></p>
+    <p id="id4"></p>
+    <p id="id5"></p>
+    <p id="id6"></p>
+    <p id="id7"></p>
+    <p id="id8"></p>
+
+    <script>
+
+        // /************************************************/
+        // //JavaScript DataType : NUMBER
+        // const x = 5;            // Data Type = numbers 
+        // const y = 10;
+        // const z = 0;
+        // let part1 = x/z;        // Infinity
+        // let part2 = "string"/x; // NaN - Not a Number
+        // let part3 = x + y;  
+        // document.getElementById("id1").innerHTML =
+        // "Sum of x & y = " +part3 +"<br>" +
+        // "Value of part1: " +part1 +"<br>" +
+        // "Value of part2: " +part2;
+
+        // /************************************************/
+        // //JavaScript DataType : BIGINT
+        // const intNumber = 1234567890123456789012345678901234567890;
+        // const bigInt = 1234567890123456789012345678901234567890n;  // Data Type BigInt
+        // document.getElementById("id2").innerHTML = 
+        // "Large Number = " +intNumber + "<br>" + "BigInt Number = " +bigInt;
+
+        // /************************************************/
+        // //JavaScript DataType : STRING
+        // let text1 = "Make in ";   // Data Type = strings in double quotes 
+        // let text2 = 'India';  // Data Type = strings in single quotes 
+        // let text3 = text1 + text2; // "+" will concatinate the strings
+        // document.getElementById("id3").innerHTML = text3;
+
+        // const _name = "Ronaldinho";
+        // const _msg  = `Hello, ${_name}!`;       // embed a variable using Backticks
+        // const _expr = `Goals scored by ${_name} : ${1 + 2}`; // embed an expression using Backticks
+        // document.getElementById("id4").innerHTML = 
+        // "Message: " +_msg + "<br>" + "Expression: " +_expr;
+
+        // /************************************************/
+        // //JavaScript DataType : BOOLEAN
+        // let indiaGoals = 3;
+        // let chinaGoals = 2;
+        // let comp = (indiaGoals == chinaGoals);
+        // document.getElementById("id5").innerHTML =
+        // (indiaGoals == chinaGoals) + "<br>" + (indiaGoals > chinaGoals); // Data Type is Boolean
+
+        // /************************************************/
+        // //JavaScript DataType : null and undefined
+        // let myAge = null;   // Data Type null
+        // let myColor;      // Data Type "undefined"
+        // document.getElementById("id6").innerHTML = 
+        // "Value of my age: " +myAge + "<br>" + "Value of my color: " +myColor;
+
+        // /************************************************/
+        // // Demo the Symbol Data Type 
+        // const player = {
+        //   fname: "Leo",
+        //   lname: "Messi",
+        //   position: "Forward" };
+        // let uid = Symbol('uid');
+        // player[uid] = 98765;
+        // document.getElementById("id7").innerHTML = 
+        // 'Player uid using Symbol: ' + player[uid] + " " + '<br>' + 'Player uid using Object: ' + player.uid;
+
+        // /************************************************/
+        // // Demo the typeof operator 
+        // document.getElementById("id8").innerHTML =
+        // "typeof(x) = " +typeof(x) +"<br>" +
+        // "typeof(part) = " +typeof(part1) +"<br>" +
+        // "typeof(10n) = " +typeof(10n)  +"<br>" +
+        // "typeof(comp) = " +typeof(comp);
+
+    </script>
+
+</body>
+</html>
+
+

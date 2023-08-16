@@ -1,0 +1,48 @@
+
+<!DOCTYPE html>
+<html lang="en-us">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Simple DOM example</title>
+    <style>
+        .highlight {
+          color: white;
+          background-color: black;
+          padding: 10px;
+          width: 250px;
+          text-align: center;
+        }
+      </style>
+  </head>
+  <body>
+      <section>
+        <img src="/img/indiaflag.webp" alt="Flag Colors">
+        <p>Here we will add a link to the <a href="https://skillzam.com/" target="_blank">Skillzam homepage</a></p>
+      </section>
+
+      <script>
+        const link = document.querySelector('a');
+        link.textContent = 'Skillzam - Learn without limits';
+        link.href = 'https://skillzam.com';
+  
+        const sect = document.querySelector('section');
+        const para = document.createElement('p');
+        para.textContent = 'We hope you loved these colors.';
+        sect.appendChild(para);
+  
+        const text = document.createTextNode(' — the premier source for web development knowledge.');
+        const linkPara = document.querySelector('p');
+        linkPara.appendChild(text);
+  
+        // You could clone link para by doing something like this and inserting the new para instead
+        // var newPara = linkPara.cloneNode(true);
+  
+        sect.appendChild(linkPara);
+        linkPara.parentNode.removeChild(linkPara);
+  
+        para.setAttribute('class', 'highlight');
+      </script>
+
+  </body>
+</html>

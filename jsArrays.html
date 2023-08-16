@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+    <!-- 
+    Skillzam - Learn without limits
+    Email: info@skillzam.com
+    Phone: +91-80500-80399
+    Web: www.skillzam.com
+    -->
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>JavaScript Arrays</title>
+</head>
+<body>
+  <!--
+    Arrays are simple data structures
+    Arrays are generally described as "list-like objects" 
+    Ordered collections of values
+    Array is a special variable, which can hold more than one value
+    It is a common practice to declare arrays with the const keyword
+  -->  
+
+    <h1>Demo : JavaScript Arrays </h1>
+
+    <script>
+        
+        /************************************************/
+        // Simple Example of an String Array
+        const players = ["Sachin", "Rohit", "Virat", "Dhoni", "Zaheer", "Suresh", "Rahul"];
+        let firstPlayer = players[0]; 
+        console.log(firstPlayer);
+
+        /************************************************/
+        //Array Methods: pop and  push 
+        players.pop();
+        players.push("Rahul");
+        console.log(players);
+
+        /************************************************/
+        //Array Methods: shift and  unshift
+        players.shift();
+        players.unshift("Sachin");
+        console.log(players);
+
+        /************************************************/
+        //Array Methods: includes and  indexOf 
+        players.includes("Zaheer"); //returns true
+        players.indexOf("Virat");  //returns the value 2
+
+        /************************************************/
+        //Array Method: concat 
+        const goodWords = ["happy", "win"];
+        const badWords = ["sad", "lose"];
+        const words = goodWords.concat(badWords);
+        console.log(words);
+
+        /************************************************/
+        //Array Method: join 
+        const playerStr = players.join(); // returns a string 'Sachin,Dhoni,Virat,Rohit,Zaheer,Rahul'
+        console.log (playerStr);
+
+        /************************************************/
+        //Array Method: reverse 
+        players.reverse(); // reverse the array values
+        console.log(players);
+        players.reverse();
+
+        /************************************************/
+        //Array Method: slice 
+        words.slice(0,1); // returns an array [happy] ( wont change the orginal array values)
+        
+        /************************************************/
+        //Array Method: splice 
+        words.splice(3,1); // removes the last value of the array. (destructive in nature)
+        words.push("lose");
+
+        /************************************************/
+        //Fetching the values from Multi-Dimension arrays
+        const multiSportPlayers = [
+            ["Sachin", "Dhoni", "Virat"],
+            ["Messi", "Ronaldo", "Neymar"],
+            ["Nadal", "Roger", "Novak"],
+        ]
+        console.log(multiSportPlayers[1][0]);
+                
+
+    </script>
+    
+</body>
+</html>

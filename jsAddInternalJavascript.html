@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+    <!-- 
+    Skillzam - Learn without limits
+    Email: info@skillzam.com
+    Phone: +91-80500-80399
+    Web: www.skillzam.com
+    -->
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+    <title>Internal JavaScript example</title>
+    <style>
+        #btn {
+            background-color: coral;
+            color:white;
+            font-weight: 600;
+            border: 2px solid maroon;
+            border-radius: 3px;
+            padding: 5px 20px;
+        }
+    </style>
+  </head>
+  <body>
+    <!--
+        Example to demo the Internal JavaScript using <script> tag
+    -->
+    <button id="btn">CREATE PARA</button>
+
+    <script>
+      document.addEventListener('DOMContentLoaded', () => {
+        function createParagraph() {
+          const para = document.createElement('p');
+          para.textContent = 'You have just created a new paragraph!';
+          document.body.appendChild(para);
+        }
+
+        const buttons = document.querySelectorAll('button');
+
+        for (const button of buttons) {
+          button.addEventListener('click', createParagraph);
+        }
+      });
+    </script>
+
+  
+  </body>
+</html>

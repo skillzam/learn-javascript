@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+    <!-- 
+    Skillzam - Learn without limits
+    Email: info@skillzam.com
+    Phone: +91-80500-80399
+    Web: www.skillzam.com
+    -->
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+    <title>Demo JavaScript Variables</title>
+  </head>  
+  <style>
+    h2 {
+      font-size: 80px;
+    }
+    p {
+      font-size: 40px;
+    }
+  </style>
+<body>
+  <!--
+    Variables are containers for storing values.
+    It's a good programming practice to declare all variables at the beginning of a script.
+    Four Ways to declare a JavaScript Variable:
+        Using var
+        Using let
+        Using const
+        Using nothing
+        
+    The var keyword is used in all JavaScript code from 1995 to 2015.
+    The let and const keywords were added to JavaScript in 2015.
+
+  > All JavaScript variables must be identified with unique names.
+    These unique names are called identifiers.
+    The general rules for constructing names for variables (unique identifiers) are:
+        Names can contain letters, digits, underscores, and dollar signs.
+        abc , abc25, _abc, $abc
+        Names must begin with a letter.
+        acb12
+        Names can also begin with $ and _ (but we will not use it in this tutorial).
+        Names are case sensitive (y and Y are different variables).
+        Reserved words (like JavaScript keywords) cannot be used as names.
+
+    In JavaScript, the equal sign (=) is an "assignment" operator, not an "equal to" operator.
+
+  > Declaring a JavaScript Variable
+    Creating a variable in JavaScript is called "declaring" a variable.
+    let myName;
+    To assign a value to the variable, use the equal sign:
+    myName = "Leo Messi";
+
+  > A variable declared without a value will have the value undefined.
+    let myName;
+    If you re-declare a JavaScript variable declared with myName, it will not lose its value.
+    var myName = "Ronaldo";
+    var myName;    
+  > You cannot re-declare a variable declared with let or const.
+
+  > JavaScript treats a dollar sign as a letter, identifiers containing $ are valid variable names
+    let $myMoney = 25;
+  
+  > JavaScript treats underscore as a letter, identifiers containing _ are valid variable names 
+    let _lastName = "Patil";
+
+  > If you put a number in quotes, the rest of the numbers will be treated as strings, and concatenated.
+
+  -->
+
+    <h2>Demo JavaScript Variables</h2>
+
+    <p id="id1"></p>
+    <p id="id2"></p>
+    <p id="id3"></p>
+    <p id="id4"></p>    
+    <p id="id5"></p>
+
+
+    <script>
+
+        /************************************************/
+        // JavaScript Variable Example
+        // Declare a JavaScript Variable using keywords var, let, const
+        var num1 = 5; // Variable name can contain numbers like num1
+        const num2 = 6; // Variable name cannot start with numbers like 2num
+        let sum = num1 + num2; // variable "sum" will store value of 11 = ( 5 + 6 )
+        document.getElementById("id1").innerHTML =
+        "The value of sum is: " +sum;
+
+
+        /************************************************/
+        // JavaScript Variable Example
+        // Variable names can start with "$" symbol like in $price1
+        const $price1 = 5;
+        const $price2 = 5;
+        let total = $price1 + $price2;
+        document.getElementById("id2").innerHTML =
+        "The total is: " +total;
+
+
+        /************************************************/
+        // JavaScript Variable Example
+        // Variable names can start with "_" (underscore) symbol like in _name
+        let _name = "FIFA ";
+        _name += "World Cup 2022";
+        document.getElementById("id3").innerHTML = _name;
+
+        
+        /************************************************/
+        // JavaScript Variable Example
+        // variable declared without a value will have the value undefined
+        var salary = 25000;
+        var salary;
+        document.getElementById("id4").innerHTML =
+        "The salary amount is : " +salary;
+
+
+        /************************************************/
+        // JavaScript Variable Example
+        // If you put a number in quotes, the rest of the numbers will be treated as strings, and concatenated
+        const intNum = 3;
+        const str = "31"; // Numbers within quotes will be treated as strings
+        let joint = str + intNum; // concatenation of number and string
+        document.getElementById("id5").innerHTML = 
+        "Result is : " +joint + " and the typeof is : " +typeof(joint);
+
+    </script>
+
+  </body>
+</html> 
+
+

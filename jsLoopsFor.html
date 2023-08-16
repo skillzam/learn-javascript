@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+    <!-- 
+    Skillzam - Learn without limits
+    Email: info@skillzam.com
+    Phone: +91-80500-80399
+    Web: www.skillzam.com
+    -->
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>JavaScript Loop: For </title>
+</head>
+<body>
+  <!--
+    > Programming languages are very useful for rapidly completing repetitive tasks
+    > Loops are all about doing the same thing over and over again
+    > There are various types of loops inJavaScript:
+            for loop
+            for .. of loop
+            for .. in loop
+            while loop
+   -->  
+
+    <h1>JavaScript Loop:For </h1>
+
+    <script>
+
+        // /************************************************/    
+        // //Print all the Single digit numbers, to the Web console
+        // //Normal way of repeated printing on console
+        // console.log(0);
+        // console.log(1);
+        // console.log(2);
+        // console.log(3);
+        // console.log(4);
+        // console.log(5);
+        // console.log(6);
+        // console.log(7);
+        // console.log(8);
+        // console.log(9);
+
+
+        // /************************************************/
+        // // JavaScript "for" loop Example    
+        // // Printing the single digit number using for loop
+        // for (let singleDigit = 0; singleDigit <= 9; singleDigit += 1) {
+        //     console.log(singleDigit);
+        // }
+        // TRACE of for loop
+        //1st: singleDigit=0; true; op: 0
+        //2nd: singleDigit=1; true; op: 1
+        //3rd: singleDigit=2; true; op: 2
+        //.
+        //.
+        //.
+        //9th: singleDigit=8; true; op: 8
+        //10th:singleDigit=9; true: op: 9
+        //11th:singleDigit=10; false; exit the for loop
+
+
+        // /************************************************/
+        // // JavaScript "for" loop Example    
+        // // Example of multiplication in "increment expression"
+        // for (let multiFive = 5; multiFive < 1000; multiFive *= 5) {
+        //     console.log(multiFive);
+        // }
+        // //1st: multiFive = 5; true; op: 5
+        // //2nd: multiFive = 25; true; op: 25
+        // //3rd: multiFive = 125; true; op: 125
+        // //4th: multiFive = 625; true; op: 625
+        // //5th: multiFive = 3125; false; Exit the for loop
+
+        // /************************************************/
+        // // JavaScript "for" loop Example 
+        // // Printing the single digit number in decreasing order, using for loop
+        // for (let i = 9; i >= 0; i -= 1) {
+        //     console.log(i);
+        // }
+
+
+        // /************************************************/
+        // // JavaScript "for" loop Example 
+        // // Using "for loop" print only even number less than 11 
+        // for (let j = 2; j < 11; j++) {
+        //     if ( j%2 === 0 ) {
+        //         console.log(j);
+        //     } 
+        // }
+
+
+        // /************************************************/
+        // // JavaScript "for" loop Example 
+        // //Using "for loop", Sum of all the number in an array
+        // let evenNum = [22, 44, 66]; // length = 3
+        // let sumNum = 0;
+        // for (let x = 0; x < evenNum.length; x++) {
+        //     sumNum = sumNum + evenNum[x];
+        // }
+        // console.log("Total of Array values = " +sumNum);
+
+        // //1st: x = 0; true; sumNum = 0 + 22 = 22
+        // //2nd: x = 1; true; sumNum = 22 + 44 = 66
+        // //3rd: x = 2; true; sumNum = 66 + 66 = 132
+        // //4th: x = 3; false; Exit the for loop
+        // // Total of Array values =  132 
+
+
+        // /************************************************/
+        // // JavaScript nested "for" loop Example
+        // // Nested for loop
+        // for (let p = 1; p <= 10; p++) {  //p:  1,2,3,4,5,6,7,8,9,10
+        //     console.log(`p is: ${p}`)  
+        //     for (let q = 1; q < 4; q++) {   //q: 1,2,3
+        //         console.log(`     q is: ${q}`)
+        //     }
+        // }
+
+        //1st of p: p = 1; true; op: p is:1
+        //1st of q: q = 1; true; op: q is:1
+        //2nd of q: q = 2; true; op: q is:2
+        //3rd of q: q = 3; true; op: q is:3
+        //4th of q: q = 4; false; Exit the inner q loop
+
+        //2nd of p: p = 2; true; op: p is:2
+        //1st of q: q = 1; true; op: q is:1
+        //2nd of q: q = 2; true; op: q is:2
+        //3rd of q: q = 3; true; op: q is:3
+        //4th of q: q = 4; false; Exit the inner q loop
+
+        //11th of p: p = 11; false; Exit the outer p loop
+
+        // /************************************************/
+        // // JavaScript nested "for" loop Example
+        // // Print the country name and Flag colors
+        // const arrFlags = [  
+        //     ["INDIA","Orange","White","Green"],  
+        //     ["GERMANY","Black","Red","Yellow"],  
+        //     ["RUSSIA","White","Red","Blue"],
+        //     ["BULGARIA","White","Green","Red"],
+        //     ["NETHERLANDS","Red","White","Blue"]  
+        // ]
+
+        // for (let a = 0; a < arrFlags.length; a++) {   // arrFlags.length = 5
+        //     let flagRow = arrFlags[a];  
+        //     console.log(flagRow[0] + " Flag Colors");  
+        //     for (let b = 1; b < flagRow.length ; b++) {   // flagRow.length = 4
+        //         console.log(flagRow[b]);
+        //     }
+        // }
+
+        //1st of a: a = 0; true; flagRow = ["INDIA","Orange","White","Green"] ; OP: INDIA Flag Colors
+        //1st of b: b = 1; true : OP: Orange
+        //2nd of b: b = 2; true : OP: White
+        //3rd of b: b = 3; true : OP: Green
+        //4th of b: b = 4; false  Exit the inner b loop
+
+        //2nd of a: a = 1; true; flagRow = ["GERMANY","Black","Red","Yellow"] ; OP: GERMANY Flag Colors
+        //1st of b: b = 1; true : OP: Black
+        //2nd of b: b = 2; true : OP: Red
+        //3rd of b: b = 3; true : OP: Yellow
+        //4th of b: b = 4; false  Exit the inner b loop
+
+
+
+        // /************************************************/
+        // // JavaScript "for .. of" loop Example
+        // // Sum of all the number in an array
+        // let numArray = [10, 20, 30, 40];  
+        // let sum = 0;
+        // for (let n of numArray) {  
+        // sum = sum + n;  
+        // }
+        // console.log(" Sum of the array is " + sum);
+        // //1st : n = 10; sum = 0 + 10 = 10
+        // //2nd : n = 20; sum = 10 + 20 = 30
+        // //3rd : n = 30; sum = 30 + 30 = 60
+        // //4th : n = 40; sum = 60 + 40 = 100
+        // // no values in the array, hence exit the loop
+
+
+
+        // /************************************************/
+        // // JavaScript "for .. of" loop Example
+        // // Use loop on the string characters
+        // for (let singleChar of "Learn without limits") {
+        //     console.log(singleChar);
+        // }
+ 
+
+        // /************************************************/
+        // // JavaScript "for .. in" loop Example
+        // // Use loop to iterate Object literals
+        // const bioMessi = {
+        //     name: "Leo Messi",
+        //     team: "Paris Saint-Germain",
+        //     position: "Forward",
+        //     height: 170,
+        //     weight: 159,
+        //     birthdate: "24/6/1987",
+        //     age: 35,
+        //     nationality: "Argentina",
+        //     careerHistory: ["Paris Saint-Germain","Barcelona","Argentina"], 
+        //     isRetired: false
+        // }
+        // for (let bio in bioMessi) {
+        //     console.log(`${bio.toUpperCase()} is ${bioMessi[bio]}`);
+        //     //console.log(bioMessi[bio]);
+        //     // console.log(bioMessi[name]);
+        // }
+
+
+        /************************************************/
+        // JavaScript "for .. of" loop Example
+        // Use loop on Object methods to iterate values - turn data into an array
+        const goalScores = {
+            Messi: 44,
+            Ronaldo: 43,
+            Diogo: 43,
+            Lewandowski: 39,
+            Turpel: 37,
+            Suarez: 36,
+            Salah: 35,
+            Griezmann: 35,
+            Cifuente: 34,
+            Kane: 33
+        }
+        let gTotal = 0;
+        let goals = Object.values(goalScores);   // [44, 43, 43, 39, 37, 36, 35, 35, 34, 33]
+        for (let goal of goals) {
+            //gTotal += goal; 
+            gTotal = gTotal + goal; 
+        }
+        console.log(`Total goals scored by top 10 players in the year 2018: ${gTotal}`);
+        console.log(goals);   // [44, 43, 43, 39, 37, 36, 35, 35, 34, 33]
+
+    </script>
+    
+</body>
+</html>

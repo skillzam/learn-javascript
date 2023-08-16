@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+    <!-- 
+    Skillzam - Learn without limits
+    Email: info@skillzam.com
+    Phone: +91-80500-80399
+    Web: www.skillzam.com
+    -->
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+    <title>Demo JavaScript Functions</title>
+  </head>  
+  <style>
+    h2 {
+      font-size: 80px;
+    }
+    p {
+      font-size: 40px;
+    }
+  </style>
+  
+<body>
+    <!--
+    >  Quite often we need to perform a similar action in many places of the script.
+       Block of code designed to perform a particular task       
+       Functions are the main “building blocks” of the program. 
+       They allow the code to be called many times without repetition.
+       function is executed when "something" invokes it (calls it)
+    
+    > Why Functions :
+        - You can reuse code: Define the code once, and use it many times.
+        - You can use the same code many times with different arguments, to produce different results.
+
+    > Function Syntax :
+        - A JavaScript function is defined with the function keyword, followed by a name, followed by parentheses ().
+        - Function names can contain letters, digits, underscores, and dollar signs (same rules as variables).
+        - The parentheses may include parameter names separated by commas:
+        (parameter1, parameter2, ...)
+        - The code to be executed, by the function, is placed inside curly brackets: {}
+        - Function parameters are listed inside the parentheses () in the function definition.
+        - Function arguments are the values received by the function when it is invoked.
+        - Inside the function, the arguments (the parameters) behave as local variables.
+
+    > Function Invocation :
+        - The code inside the function will execute when "something" invokes (calls) the function:
+            When an event occurs (when a user clicks a button)
+            When it is invoked (called) from JavaScript code
+            Automatically (self invoked)
+    
+    > Function Return :
+        - When JavaScript reaches a return statement, the function will stop executing.
+        - If the function was invoked from a statement, JavaScript will "return" to execute the code after the invoking statement.
+        - Functions often compute a return value. The return value is "returned" back to the "caller"
+
+    > The () Operator Invokes the Function
+        - Accessing a function without () will return the function object instead of the function result.
+
+    > Local Variables : 
+        - Variables declared within a JavaScript function, become LOCAL to the function.
+        - Local variables can only be accessed from within the function.
+        - Local variables are created when a function starts, and deleted when the function is completed.
+        - Hence, variables with the same name can be used in different functions
+  
+    -->
+    <h2>Demo JavaScript Functions</h2>
+
+    <p id="sumOfTwo"></p>
+    <br> 
+    <p id="tempConvert"></p> 
+
+    <!-- <script src="/script/app.js"></script> -->
+
+    <script>
+
+      // function addNum () {
+      //     let num1 = parseInt(prompt('Please enter the number : '));
+      //     let num2 = parseInt(prompt('Please enter the number : '));
+      //     let sum = num1 +num2;
+      //     console.log(sum);
+      // }
+      // addNum();
+
+      // function addNumbers (val1, val2) {
+      //   let sum = val1 +val2;
+      //   return sum;
+      // }
+      // console.log(addNumbers(12,12));
+      // let funcRtn = addNumbers(12,12);
+      // console.log(funcRtn);
+
+      
+        // /************************************************/
+        // // JavaScript Function Scope
+        // // Score Goals Example
+        // let totalGoals = 0; // declaring the variable global
+        // function scoreGoals() { // no paramaters in the function
+        //   totalGoals = 5; // Global variable value
+        //   console.log(totalGoals); 
+        // }
+        // console.log(totalGoals); // 0
+        // scoreGoals(); // calling or invoking a function
+        // console.log(totalGoals);
+
+
+        // /************************************************/
+        // // JavaScript Function Scope
+        // // Dog Names Example
+        // const dog = 'Jacky'; // global
+        // function dogNames() {
+        //     const dog = 'Sultan'; // local
+        //     console.log(dog);
+        // }
+        // dogNames();  
+        // console.log(dog);  
+
+
+        // /************************************************/
+        // // JavaScript Function Example : Largest of two distinct numbers
+        // // DEFINE Function 
+        // function largestValue(num1, num2) {
+        //     if (num1 > num2) {
+        //         //console.log(`Largest number is ${num1}`)
+        //         return(`Largest number is ${num1}`);
+        //     } else {
+        //         //console.log(`Largest number is ${num2}`)
+        //         return(`Largest number is ${num2}`);
+        //     }
+        // }
+
+        // let largeNum = largestValue(2,66); // RUN Function
+        // console.log(largeNum);
+
+
+        // /************************************************/
+        // // JavaScript Function Example : Sum of two numbers
+        // function addTwo(value1, value2) {
+        //     // const sum = value1 + value2;
+        //     // return sum; // Function returns the sum of value1 and value2
+        //     return(value1 + value2);
+        // }
+        // let x = 5;
+        // let y = 15;
+        // let total = addTwo(x,y);  // Function is called, return value will end up in total
+        // document.getElementById("sumOfTwo").innerHTML = 
+        // "Sum of two numbers " +x +" and " +y +" is " +total;
+
+
+
+        // /************************************************/
+        // // JavaScript Function Example : 
+        // // Convert temperature from fahrenheit to celsius
+        // function toCelsius(ftemp) {
+        //     let ctemp = ((5/9) * (ftemp-32));
+        //     return ctemp.toPrecision(4); // Function returns the converted temperature in Celsius
+        //  }
+        // let tempFar = 99;
+        // console.log(toCelsius(tempFar));
+        // document.getElementById("tempConvert").innerHTML = 
+        // `${tempFar} °F in Celsius is ${toCelsius(tempFar)} ℃`;
+
+
+        // /************************************************/
+        // // JavaScript Object Methods Example : 
+        // // Convert temperature from fahrenheit to celsius
+        // const performMath = {
+        //     Gravity: 9.81,
+        //     sqNum(int) {            // sqNum: function (int) {return int ** 2; },
+        //         return int ** 2;
+        //     },
+        //     cuNum(int) {            // cuNum: function (int) {return int ** 3; }  
+        //         return int ** 3;
+        //     }
+    
+        // }
+        // console.log(`Square of 9 is ${performMath.sqNum(9)}`);
+        // console.log(`Cube of 10 is ${performMath.cuNum(10)}`);
+
+
+        // /************************************************/
+        // // JavaScript Function with try and catch Example : 
+        // // Skillzam logo repeat
+        // function logo(company) {
+        //     try {
+        //         console.log(company.toUpperCase().repeat(3));
+        //     } catch (err) {
+        //         console.log("Please pass an argument in logo() function.")
+        //     }
+        // }
+        // logo(); // Result will be  ERROR MSG "Please pass an argument in logo() function."
+        // logo("skillzam.."); // SKILLZAM..SKILLZAM..SKILLZAM..
+        
+
+        // /************************************************/
+        // // JavaScript Object Method "this" keyword Example : 
+        // //  
+        // let userDetails = {
+        //         fname: "John",
+        //         lname: "Smith",
+        //         fullName: function () {
+        //                     console.log(`Full name : ${this.fname} ${this.lname}`)
+        //                 } // use of "this" keyword
+        //     };
+        // userDetails.fullName();
+
+
+        // /************************************************/
+        // // JavaScript Function Lexical Scope
+        // // Cricket Team India scored in WorldCup
+        // function indiaWorldCup() {
+        //     const runScored = [317,350,322,301];
+        //     function announceScores() {
+        //         let matchNum = 1;
+        //         function scoreBoard() {
+        //             for (let run of runScored) {
+        //                 console.log(`${matchNum} : TEAM INDIA SCORED ${run} RUNS`)
+        //                 matchNum++;
+        //             }
+        //         }
+        //         scoreBoard();
+        //     }
+        //     announceScores();
+        // }
+        // indiaWorldCup();
+
+        
+        // /************************************************/
+        // // JavaScript Block Scope
+        // // Runs scored with Message Example
+        // let runScored = 321;
+        // if (runScored > 320) {
+        //     const overs = 50;
+        //     let msg = 'WE WON!'
+        // }
+        // console.log(runScored);
+        // //console.log(msg); // Will throw an ERROR ( msg is not defined)
+
+        // for (let i = 0; i < 3; i++) {
+        //     let msg = "CRICKET MATCH STARTED!";
+        //     console.log(msg)
+        // }
+        // //console.log(msg); // Will throw an ERROR ( msg is not defined)
+        // //console.log(i)      // Will throw an ERROR ( i is not defined)
+            
+    </script>   
+
+</body>
+</html>
+
+

@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+    <!-- 
+    Skillzam - Learn without limits
+    Email: info@skillzam.com
+    Phone: +91-80500-80399
+    Web: www.skillzam.com
+    -->
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+    <title>Demo JavaScript Operators</title>
+  </head>  
+  <style>
+    h2 {
+      font-size: 80px;
+    }
+    p {
+      font-size: 40px;
+    }
+  </style>
+  
+<body>
+<!--
+> There are different types of JavaScript operators:
+    - Aritmetic Operators : are used to perform arithmetic on numbers
+      Multiplication (*) and division (/) have higher precedence than addition (+) and subtraction (-).  
+        +	Addition
+        -	Subtraction
+        *	Multiplication
+        **	Exponentiation  
+        /	Division
+        %	Modulus (Division Remainder)
+        ++	Increment
+        --	Decrement
+
+    - Assignment Operators : assign values to JavaScript variables.
+        Operator	Example	    Same As
+            =	      x = y	      x = y
+            +=	    x += y	    x = x + y
+            -=	    x -= y	    x = x - y
+            *=	    x *= y	    x = x * y
+            /=	    x /= y	    x = x / y
+            %=	    x %= y	    x = x % y
+            **=	    x **= y	    x = x ** y
+
+    - Comparison Operators
+        Operator	Description
+            ==	    equal to
+            ===	    equal value and equal type
+            !=	    not equal
+            !==	    not equal value or not equal type
+            >	      greater than
+            <	      less than
+            >=	    greater than or equal to
+            <=	    less than or equal to
+            ?	      ternary operator
+
+    - Logical Operators
+        Operator	Description
+            &&	    logical and
+            ||	    logical or
+            !	      logical not
+
+    Conditional Operators
+    Type Operators
+
+> Adding JavaScript Strings
+  The + operator can also be used to add (concatenate) strings.
+  The += assignment operator can also be used to add (concatenate) strings:
+
+> Adding Strings and Numbers
+  Adding two numbers, will return the sum, but adding a number and a string will return a string:
+
+-->
+    <h2>Demo JavaScript Operators</h2>
+
+    <p id="id1"></p>
+    <p id="id2"></p>
+    <p id="id3"></p>
+    <p id="id4"></p>
+    <p id="id5"></p>
+
+
+    <script>
+
+        /************************************************/
+        // JavaScript Aritmetic Operators Example on Numbers datatype
+        let x = 6;
+        let y = 2;
+        let a = x + y;   // Addition = 8
+        let s = x - y;   // Subtraction = 4
+        let z = x * y;   // Multiplication = 12
+        let p = z/2;     // Division = 6
+        let q = x**y;    // Exponentiation = 36
+        let r = q%y;     // Modulus = 0
+        let i = ++x;     // Increment = 7
+        let d = --y;     // Decrement = 1
+        let PEMDAS = x*x/y-x+z; // PEMDAS = P- Parentheses, E- Exponents, M- Multiplication, D- Division, A- Addition, and S- Subtraction
+        document.getElementById("id1").innerHTML = 
+        " a="+a + " s="+s + " z="+z + " p="+p + " q="+q + " r="+r + " i="+i + " d="+d + " x="+x + " y="+y +" PEMDAS=" +PEMDAS;
+
+
+        /************************************************/
+        // JavaScript Aritmetic Operator(+) Example on Strings datatype
+        let text1 = "SKILL";
+        let text2 = "ZAM";
+        let text3 = text1 + text2; // + operator used to add (concatenate) strings
+        document.getElementById("id2").innerHTML = 
+        "Concatination of two strings : " +text3;
+
+
+        /************************************************/
+        // JavaScript Assignment Operators Example on Numbers datatype
+        var value1 = 10;
+        value1 *= 5;  //multiplication assignment operator : value1 = value1 * 5
+        document.getElementById("id3").innerHTML = 
+        "Multiplication of two numbers is : " +value1;
+
+
+        /************************************************/
+        // JavaScript Assignment Operator(+=) Example on Strings datatype
+        let _name = "FIFA ";
+        _name += "World Cup"; // On strings, the + operator is called concatenation operator
+        document.getElementById("id4").innerHTML = _name;
+
+
+        /************************************************/
+        // JavaScript Addition Operator Example 
+        // Addition of Numbers and Strings datatype will result in string concatenation
+        let sum1 = 5 + 9;
+        let sum2 = '8' + 2; // 82
+        let join1 = "Math" + 66; // Math66 : adding a number and a string will return a string
+        document.getElementById("id5").innerHTML =
+        sum1 + "<br>" + sum2 + "<br>" + join1;
+
+    </script>
+
+</body>
+</html>
+
+

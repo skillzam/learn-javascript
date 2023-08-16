@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+    <!-- 
+    Skillzam - Learn without limits
+    Email: info@skillzam.com
+    Phone: +91-80500-80399
+    Web: www.skillzam.com
+    -->
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>JavaScript Objects</title>
+</head>
+<body>
+  <!--
+    > Objects are collections of properties.
+    > Objects are variables too. But objects can contain many values.
+    > Properties are a key-value pair
+    > Rather than accessing data using an index, we use custom keys.
+    > The values are written as name:value pairs (name and value separated by a colon).
+  -->  
+  
+    <h1>Demo : JavaScript Objects </h1>
+
+    <script>
+
+
+        // /************************************************/
+        // // JavaScript Objects Example
+        // // Object literals of a Students Object
+        // const students = {
+        //     firstName: "Jasmine",
+        //     lastName: "Dsouza",
+        //     gender: "Female",
+        //     age: 25,
+        //     isGraduate: true,
+        //     favSub: ["Physics","Computers","History"]
+        // };
+        // // To retrieve a value:
+        // console.log(students.firstName);
+        // console.log(students["age"]);
+        // console.log(students.favSub[1]);
+
+
+        // /************************************************/
+        // // JavaScript Objects Example
+        // // Define (or create) a JS object with an object literal and accessing Object Properties
+        // const bioMessi = {
+        //     name: "Leo Messi",
+        //     team: "Paris Saint-Germain",
+        //     position: "Forward",
+        //     height: 170,
+        //     weight: 159,
+        //     birthdate: "24/6/1987",
+        //     age: 35,
+        //     nationality: "Argentina",
+        //     careerHistory: ["Paris Saint-Germain","Barcelona","Argentina"], 
+        //     isRetired: false
+        // }
+        // console.log(bioMessi.name,"|", bioMessi.team); // Accessing Object Properties
+
+        // const bioRonaldo = {
+        //     name: "Cristiano Ronaldo",
+        //     team: "Manchester United",
+        //     position: "Forward",
+        //     height: 187,
+        //     weight: 183,
+        //     birthdate: "5/2/1985",
+        //     age: 37,
+        //     nationality: "Portugal",
+        //     careerHistory: ["Manchester United","Juventus","Real Madrid","Portugal"], 
+        //     isRetired: false
+        // }
+        // console.log(bioRonaldo.careerHistory[0]); // Accessing Object Properties like array
+
+        // const bioNeymar = {
+        //     name: "Neymar",
+        //     team: "Paris Saint-Germain",
+        //     position: "Forward",
+        //     height: 175,
+        //     weight: 150,
+        //     birthdate: "5/2/1992",
+        //     age: 30,
+        //     nationality: "Brazil",
+        //     careerHistory: ["Paris Saint-Germain","Barcelona","Santos","Brazil"], 
+        //     isRetired: false
+        // }
+        // console.log(bioNeymar.age, bioNeymar.isRetired); // Accessing Object Properties of type numbers & boolean
+
+
+
+        /************************************************/
+        // JavaScript Objects Example
+        // Object literals in Arrays
+        const playersBio = [
+            {
+                name: "Leo Messi",
+                team: "Paris Saint-Germain",
+                position: "Forward",
+                height: 170,
+                weight: 159,
+                birthdate: "24/6/1987",
+                age: 35,
+                nationality: "Argentina",
+                careerHistory: ["Paris Saint-Germain","Barcelona","Argentina"], 
+                isRetired: false
+            },
+
+            {
+                name: "Cristiano Ronaldo",
+                team: "Manchester United",
+                position: "Forward",
+                height: 187,
+                weight: 183,
+                birthdate: "5/2/1985",
+                age: 37,
+                nationality: "Portugal",
+                careerHistory: ["Manchester United","Juventus","Real Madrid","Portugal"], 
+                isRetired: false
+            },
+
+            {
+                name: "Neymar",
+                team: "Paris Saint-Germain",
+                position: "Forward",
+                height: 175,
+                weight: 150,
+                birthdate: "5/2/1992",
+                age: 30,
+                nationality: "Brazil",
+                careerHistory: ["Paris Saint-Germain","Barcelona","Santos","Brazil"], 
+                isRetired: false
+            }
+        ]
+        // To retrieve a value
+        console.log(playersBio[0].name);
+        console.log(playersBio[1].careerHistory[0]);
+        console.log(playersBio[2].isRetired);
+
+
+    </script>
+</body>
+</html>

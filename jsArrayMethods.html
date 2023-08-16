@@ -1,0 +1,308 @@
+<!DOCTYPE html>
+    <!-- 
+    Skillzam - Learn without limits
+    Email: info@skillzam.com
+    Phone: +91-80500-80399
+    Web: www.skillzam.com
+    -->
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+    <title>JavaScript Array Methods</title>
+  </head>  
+  <style>
+    h2 {
+      font-size: 80px;
+    }
+    p {
+      font-size: 40px;
+    }
+  </style>
+  
+<body>
+    <!--
+      JavaScript Array Methods
+    -->
+    <h2>JavaScript Array Methods</h2>
+
+
+    <script>
+
+        // /************************************************/
+        // // JavaScript Arrow Functions
+        // //  Find the area of the rectangle
+        // const getArea = function(width,height) {
+        //     return width * height;
+        // }
+        // console.log(getArea(12,3));
+        
+        // // Arrow Functions getArea
+        // const getArea = (width,height) => {
+        //     return width * height;
+        // }
+        // console.log(getArea(12,4));
+        
+        // //Arrow Functions getArea has NO return keyword
+        // const getArea = (width,height) => width * height;
+        // console.log(getArea(12,5));
+
+
+        // /************************************************/
+        // // JavaScript Arrow Functions
+        // // Get area of the square : No need for parens when one param
+        // const getSqArea = side => side * side;
+        // console.log(getSqArea(5));
+           
+        //     // function getSqArea (side) {
+        //     //     return side * side;
+        //     // }
+        //     // console.log(`The area of the square with the side 3 is ${getSqArea(3)}`);
+
+
+
+
+
+
+        // /************************************************/
+        // // JavaScript forEach() Array Methods Example
+        // //  Single Digit even number 
+        // const singleDigit = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9];
+        // singleDigit.forEach(function (digit) {
+        //     if (digit % 2 === 0 && digit > 0) {
+        //         console.log(digit)
+        //     }
+        // })
+        // // //Same as the above
+        // // for (let digit of singleDigit) {
+        // //     console.log(digit);
+        // // }
+
+
+        // /************************************************/
+        // // JavaScript forEach() Array Method used on Objects Example 
+        // //  Player Rating
+        // const playerRating = [
+        //     {
+        //         name: 'Messi',
+        //         rating: 9
+        //     },
+        //     {
+        //         name: 'Ronaldo',
+        //         rating: 8
+        //     },
+        //     {
+        //         name: 'Neymar',
+        //         rating: 7
+        //     },
+        //     {
+        //         name: 'John',
+        //         rating: 6
+        //     }
+        // ]
+        // playerRating.forEach(function (player) {
+        //     if (player.rating > 6) {
+        //     console.log(`${player.name} - ${player.rating}`)}
+        // })
+
+
+        
+        // /************************************************/
+        // // JavaScript map() Array Methods Example
+        // //  Single Digit even number 
+        // const singleDigit = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9];
+        // const squNum = singleDigit.map(function (value) {
+        //     return value * value;
+        // })
+     
+
+        // /************************************************/
+        // // JavaScript map() Array Method used on Objects Example 
+        // //  Player Rating
+        // const playerRating = [
+        //     {
+        //         name: 'Messi',
+        //         rating: 9
+        //     },
+        //     {
+        //         name: 'Ronaldo',
+        //         rating: 8
+        //     },
+        //     {
+        //         name: 'Neymar',
+        //         rating: 7
+        //     },
+        //     {
+        //         name: 'John',
+        //         rating: 6
+        //     }
+        // ]
+        // const footballPlayers = playerRating.map(function (player) {
+        //     return player.name.toUpperCase();
+        // })
+
+
+        // /************************************************/
+        // // JavaScript filter() Array Methods Example
+        // //  Single Digit even number 
+        // const singleDigit = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9];
+        // const lessThan5 = singleDigit.filter(num => {
+        //     return num < 5
+        // })
+
+
+        // /************************************************/
+        // // JavaScript filter() Array Method used on Objects Example 
+        // //  Player Rating
+        // const playerRating = [
+        //     {
+        //         name: 'Messi',
+        //         rating: 9
+        //     },
+        //     {
+        //         name: 'Ronaldo',
+        //         rating: 8
+        //     },
+        //     {
+        //         name: 'Neymar',
+        //         rating: 7
+        //     },
+        //     {
+        //         name: 'John',
+        //         rating: 6
+        //     }
+        // ]
+        // const goat = playerRating.filter(player => player.rating >= 8)
+
+        
+        // /************************************************/
+        // // JavaScript find() Array Method Example 
+        // // Greater than the value of an array
+        // const singleDigit = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9];
+        // const greaterThan = singleDigit.find(num => {
+        //     return num > 9
+        // })
+
+
+        // // /************************************************/
+        // // // JavaScript reduce() Array Method Example 
+        // // // Find the sum of an array elements 
+        // const singleDigits = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9];
+        // // Normal way using the for .. of loop
+        // // let sum = 0;
+        // // for (let digit of singleDigits) {
+        // //     sum += digit; // sum = sum + digit;
+        // // }
+        // // console.log(sum);
+
+        // //Find the sum using the reduce array method
+        // const total = singleDigits.reduce((sum, d) => sum + d);
+        // //1st sum=0 ; d=0 ; return 0+ 0 = 0 ; sum = 0
+        // //2nd sum=0 ; d=1 ; return 0 + 1 = 1 ; sum = 1
+        // //3rd sum=1 ; d=2 ; return 1 + 2 = 3 ; sum = 3
+        // //4th sum=3 ; d=3 ; return 3 + 3 = 6 ; sum = 6
+        
+
+
+        //The reduce() method can accept an initial value
+        // const total = singleDigits.reduce((sum, digit) => sum + digit, 200);
+        // const total = singleDigits.reduce(function (sum, digit) {return sum + digit} , 100);
+
+        // /************************************************/
+        // // JavaScript reduce() Array Method used on Objects Example 
+        // //  Find Best Rated player 
+        // const playerRating = [
+        //     {
+        //         name: 'Messi',
+        //         rating: 9
+        //     },
+        //     {
+        //         name: 'Ronaldo',
+        //         rating: 8
+        //     },
+        //     {
+        //         name: 'Neymar',
+        //         rating: 7
+        //     },
+        //     {
+        //         name: 'John',
+        //         rating: 6
+        //     }
+        // ]
+
+        // const topRated = playerRating.reduce((bestRate, currRate) => {
+        //     if (currRate.rating > bestRate.rating) {
+        //         return currRate;
+        //     }
+        //     return bestRate;
+        // })
+
+
+        // /************************************************/
+        // // JavaScript some() Array Method Example 
+        // // Does any value exits in the array
+        // const singleDigits = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9];
+        // const isExists = singleDigits.some(digit => digit > 10);
+
+
+        // /************************************************/
+        // // JavaScript some() Array Method used on Objects Example 
+        // // Does any player exits who's rating is more than certain value 
+        // const playerRating = [
+        //     {
+        //         name: 'Messi',
+        //         rating: 9
+        //     },
+        //     {
+        //         name: 'Ronaldo',
+        //         rating: 8
+        //     },
+        //     {
+        //         name: 'Neymar',
+        //         rating: 7
+        //     },
+        //     {
+        //         name: 'John',
+        //         rating: 6
+        //     }
+        // ]
+        // const isPlayerExists = playerRating.some(player => player.rating > 6);
+
+
+        // /************************************************/
+        // // JavaScript every() Array Method Example 
+        // // Does every element less than certain value in the array
+        // const singleDigits = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9];
+        // const isAll = singleDigits.every(digit => digit < 9);
+
+
+        // /************************************************/
+        // // JavaScript every() Array Method used on Objects Example 
+        // // Does every player has a rating is more than certain value 
+        // const playerRating = [
+        //     {
+        //         name: 'Messi',
+        //         rating: 9
+        //     },
+        //     {
+        //         name: 'Ronaldo',
+        //         rating: 8
+        //     },
+        //     {
+        //         name: 'Neymar',
+        //         rating: 7
+        //     },
+        //     {
+        //         name: 'John',
+        //         rating: 6
+        //     }
+        // ]
+        // const isAllPlayer = playerRating.some(player => player.rating > 5);
+
+
+    </script>   
+
+</body>
+</html>
+
+

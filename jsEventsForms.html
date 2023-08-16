@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FakeTwitter Home</title>
+
+    <style>
+        * {
+            font-family: 'Courier New', Courier, monospace;
+            box-sizing: border-box;
+        }
+
+        body {
+            background-color: #f1f1f1;
+        }
+
+        h1 {
+            text-align: center;
+            color: white;
+            background-color: #009ae6;
+            padding: 32px;
+            margin: 0 0 16px 0;
+        }
+
+        .container {
+            max-width: 1400px;
+            margin-left: auto;
+            margin-right: auto;
+            height: 1200px;
+        }
+
+        #foot {
+            clear: both;
+            max-width: 1400px;
+            margin-left: auto;
+            margin-right: auto;
+            color: white;
+            background-color: #0078b3;
+            padding: 16px;
+            margin-top: 8px;
+            text-align: center;
+        }
+
+        span {
+            padding: 16px;
+        }
+
+        input,
+        textarea {
+            border: 3px solid lightblue;
+            border-radius: 4px;
+        }
+
+        ul li {
+            background-color: lightblue;
+            margin-bottom: 5px;
+            list-style-type: none;
+            padding: 2px;
+            border-radius: 3px;
+        }
+
+        #submitBtn {
+            background-color: #009ae6;
+            color: white;
+            font-size: 1.2em;
+            font-weight: 600;
+            border: none;
+            padding: 5px 8px;
+            border-radius: 4px;
+        }
+
+        #submitBtn:hover {
+            cursor: pointer;
+            background-color: #0078b3;
+        }
+
+        #tweetdetails {
+            float: left;
+            width: 33%;
+            background-color: white;
+            box-shadow: 0 4px 10px 0 lightgray;
+            padding: 8px;
+            margin: 0 8px 0 0;
+            border-radius: 5px;
+        }
+
+        #tweetdetails:hover {
+            box-shadow: 0 4px 10px 0 gray;
+        }
+
+        #tweetpost {
+            float: left;
+            width: 65%;
+            background-color: white;
+            box-shadow: 0 4px 10px 0 lightgray;
+            padding: 8px;
+            margin: 0 0 0 8px;
+            border-radius: 5px;
+        }
+
+        #tweetpost:hover {
+            box-shadow: 0 4px 10px 0 gray;
+        }
+
+        strong {
+            display: block;
+            background-color: lightblue;
+        }
+
+        @media (max-width: 800px) {
+            #tweetdetails {
+                margin: 5px;
+                width: 100%;
+            }
+
+            #tweetpost {
+                margin: 5px;
+                width: 100%;
+            }
+        }
+    </style>
+
+</head>
+
+<body>
+
+    <header>
+        <h1>FakeTwitter</h1>
+    </header>
+
+    <main class="container">
+        <div id="tweetdetails">
+            <h2>Tweet Details: </h2>
+            <hr>
+            <form action="#" id="tweetForm">
+                <input type="text" name="username" placeholder="Username"> <br> <br>
+                <textarea name="tweetarea" id="tweetId" placeholder="What's happening?" cols="40" rows="3"></textarea>
+                <br><br>
+                <button id="submitBtn">Post Tweet</button>
+                <!-- <input type="text" name="tweetarea" placeholder="Write tweet"> <br> <br> 
+                <input type="submit" id="submitBtn" value="Post Tweet"> -->
+            </form>
+        </div>
+
+        <div id="tweetpost">
+            <h2>Latest Tweets:</h2>
+            <hr>
+            <ul id="tweets"> </ul>
+        </div>
+    </main>
+
+    <footer id="foot">
+        <div>
+            <span>Terms of Service</span>
+            <span>Privacy Policy</span>
+            <span>Cookie Policy</span>
+            <span>Accessibility</span>
+            <span>Ads info</span>
+            <span>More ...</span>
+            <br> <br>
+            <span>© 2023 FakeTwitter, Inc.</span>
+        </div>
+    </footer>
+
+    <script>
+
+        const tweetForm = document.querySelector('#tweetForm');
+        const tweetsContainer = document.querySelector('#tweets');
+        tweetForm.addEventListener('submit', function (event) {
+            event.preventDefault(); // the default action that belongs to the event will not occur
+
+            // const usernameInput = document.querySelectorAll('input')[0];
+            // const tweetInput = document.querySelector('#tweetId');
+            const usernameInput = tweetForm.elements.username;
+            const tweetInput = tweetForm.elements.tweetarea;
+            addTweet(usernameInput.value, tweetInput.value);
+            usernameInput.value = '';
+            tweetInput.value = '';
+        });
+
+        const addTweet = (uname, tweet) => {    
+            const newTweet = document.createElement('li'); // <li></li>
+            const strongTag = document.createElement('strong'); // <strong></strong>
+            strongTag.append(`@${uname}`); // <strong>@uname</strong>
+            newTweet.append(strongTag);    // <li><strong>@uname</strong></li>
+            newTweet.append(`${tweet}`)    // <li><strong>@uname</strong> - tweet</li>
+            tweetsContainer.append(newTweet); // <ul><li><strong>@uname</strong> - tweet</li></ul>
+        }
+
+        addTweet('skillzam', 'Skill development platform enables students, professionals and Corporate organizations to transform lives through learning.');
+        addTweet('workzam', 'Best job site that takes immense efforts to put job seekers FIRST, giving them access to search for jobs, post resumes and explore companies.');
+        addTweet('elonmusk','I hope that even my worst critics remain on Twitter, because that is what free speech means');
+        addTweet('BarackObama','No one is born hating another person because of the color of his skin or his background or his religion');
+        addTweet('GretaThunberg',"this is what happens when you don't recycle your pizza boxes");
+
+    </script>
+</body>
+
+</html>

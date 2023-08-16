@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript Keyboard Evenets</title>
+
+</head>
+
+<body>
+    <button>CLICK</button>
+    <input type="text">
+
+    <script>
+        // document.querySelector('button').addEventListener('click', function (evt) {
+        //     console.log(evt)
+        // })
+
+
+        // const input = document.querySelector('input');
+        // input.addEventListener('keydown', function (e) {
+        //     console.log(e.key)
+        //     console.log(e.code)
+        // })
+        // input.addEventListener('keyup', function () {
+        //     console.log("Key is released")
+        // })
+
+        window.addEventListener('keydown', function (event) {
+            switch (event.code) {
+                case 'ArrowUp':
+                    console.log(event.code);
+                    console.log("UP!");
+                    break;
+                case 'ArrowDown':
+                    console.log(event.code);
+                    console.log("DOWN!");
+                    break;
+                case 'ArrowLeft':
+                    console.log(event.code);
+                    console.log("LEFT!");
+                    break;
+                case 'ArrowRight':
+                    console.log(event.code);
+                    console.log("RIGHT!");
+                    break
+                default:
+                    console.log("IGNORED!")
+            }
+        })
+
+    </script>
+</body>
+
+</html>

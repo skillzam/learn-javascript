@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+    <!-- 
+    Skillzam - Learn without limits
+    Email: info@skillzam.com
+    Phone: +91-80500-80399
+    Web: www.skillzam.com
+    -->
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+    <title>JavaScript Example : SignUp Form </title>
+    
+    <style>
+
+        h2{
+            text-align: center;
+        }   
+ 
+        .signupForm {
+            position: relative;
+            display: block;
+        }
+        #fname, #lname, #mail, #passwd, #signup {
+            display: block;
+            padding: 5px 15px;
+            margin: 10px;
+            color: #004aed;
+            border: 2px solid #004aed;
+            border-radius: 5px;
+            width: 20%;
+
+        }
+        #signup {
+            display: block;
+            padding: 5px 15px;
+            margin: 10px;
+            background-color: #004aed;
+            color: white;
+            width: 10%;
+        }
+        #signup:hover {
+            background-color: white;
+            color: #004aed;
+            cursor: pointer;
+        }
+        #signup:active {
+            background-color: white;
+            border: 2px solid green;
+            color: green;
+            cursor: pointer;
+        }
+
+    </style>
+
+    <script>
+        window.onload = function(){
+            const fnam = document.getElementById("fname").value =  "Brad";
+            const lnam = document.getElementById("lname").value =  "Morgan";
+            const email = document.getElementById("mail").value =  "brad.morgan@example.com";
+            const password = document.getElementById("passwd").value =  "Pa$$w0rd";
+        }
+
+        function SignupData() {
+            const para = document.createElement('p');
+            para.textContent = fname;
+        }
+    </script>
+    
+  </head>
+  <body>
+    <!--
+        JavaScript Example : SignUp Form
+    -->
+    <h2>Sign Up</h2>
+    <section class="formRegister">
+        <form class="signupForm">
+            <input id="fname" type="text" title="First Name" placeholder="Enter First Name">
+            <input id="lname" type="text" title="Lastname" placeholder="Enter Last Name">
+            <input id="mail" type="email" title="Email" placeholder="Enter Email">
+            <input id="passwd" type="password" title="Password" placeholder="*****">
+            <input id="signup" type="button" value="SignUp" onclick="SignupData()">
+        </form>
+    </section>
+
+  </body>
+</html>

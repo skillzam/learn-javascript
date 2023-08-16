@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+    <!-- 
+    Skillzam - Learn without limits
+    Email: info@skillzam.com
+    Phone: +91-80500-80399
+    Web: www.skillzam.com
+    -->
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>JavaScript - Truthy and Falsy </title>
+</head>
+<body>
+    <!--
+    All JavaScript values have an inherent truthyness or falsyness about them.
+    
+    Falsy values listed below, rest all is truthy:
+        - false
+        - null
+        - "" (empty string)
+        - 0
+        - undefined
+        - NaN
+    -->
+    
+    <h1>JavaScript - Truthy and Falsy</h1>
+
+    <script>
+
+        
+        /************************************************/
+        // JavaScript : Example of Truthy & Falsy Values 
+        // When the string is empty, then it has falsy value
+        let cityName = "";
+        if (cityName) {
+            console.log(`City name is ${cityName}`);
+        } else 
+            console.log("City name is BLANK");
+    
+        
+        /************************************************/
+        // JavaScript : Example of Truthy & Falsy Values
+        // When the Boolean is false, then it has falsy value
+        let isVaccinated = false ;
+        if (isVaccinated) {
+            console.log("He/She is VACCINATED");
+        } else 
+            console.log("He/She is NOT VACCINATED");
+    
+
+        /************************************************/
+        // JavaScript : Example of Truthy & Falsy Values 
+        let favNum = prompt("Enter your favorite number");
+        if (!favNum) {
+            favNum = prompt("PLEASE TRY AGAIN!");
+        }
+        console.log(`My favorite number is ${favNum}`);
+
+
+    </script>
+</body>
+</html>

@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript Events Foundation</title>
+</head>
+
+<body>
+    <h1>Demo: JavaScript Events</h1>
+
+    <button onclick="alert('I am fine, Thanks!')">How are you?</button>
+    <br><br>
+    <button id="example2">Click Me</button>
+    <br><br>
+    <button id="example3">Click Me</button>
+    <br><br>
+    <button id="example4">Boogie Woogie</button>
+
+
+    <script>
+        // //Second Button 
+        // const btn2 = document.querySelector('#example2');
+        // btn2.onclick = function () {
+        //     console.log("YOU CLICKED THE SECOND BUTTON!")
+        // }
+        
+        // function consLogHover() {
+        //     console.log("MOUSE IS HOVERED OVER SECOND BUTTON.");
+        // }
+        // btn2.onmouseenter = consLogHover;
+
+        // //Heading
+        // document.querySelector('h1').onclick = () => {
+        //     alert('YOU HAVE CLICKED THE HEADING!')
+        // }
+        
+
+        // //Third Button
+        // const btn3 = document.querySelector('#example3');
+        // btn3.addEventListener('click', function () {
+        //     alert("YOU CLICKED THE THIRD BUTTON!");
+        // })
+
+        //Button Fourth
+        function boogie() {
+            console.log("BOOGIE!")
+        }
+        function woogie() {
+            console.log("WOOGIE!")
+        }
+        const bwButton = document.querySelector('#example4');
+        // bwButton.onclick = boogie;
+        // bwButton.onclick = woogie;
+        bwButton.addEventListener('click', boogie)
+        bwButton.addEventListener('click', woogie)
+
+    </script>
+
+</body>
+
+</html>

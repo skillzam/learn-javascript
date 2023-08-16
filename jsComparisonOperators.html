@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+    <!-- 
+    Skillzam - Learn without limits
+    Email: info@skillzam.com
+    Phone: +91-80500-80399
+    Web: www.skillzam.com
+    -->
+<html lang="en-us">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+    <title>Demo Comparison operators</title>
+    <style>
+
+      p {
+        font-size: 40px;
+      }
+      
+      .btn_sytle {
+        font-size: 40px;
+        background-color: #004aed;
+        color: white;
+        padding: 5px 15px;
+        border: 2px solid grey;
+        border-radius: 15px;
+      } 
+
+    </style>
+  </head>
+  <body>
+    <!--
+    - Comparison Operators 
+        Comparison and Logical operators are used to test for true or false
+        Comparison operators can be used in conditional statements to compare values and take action depending on the result
+        
+        Operator	Description
+            ==	    equal to
+            ===	    equal value and equal type
+            !=	    not equal
+            !==	    not equal value or not equal type
+            >	    greater than
+            <	    less than
+            >=	    greater than or equal to
+            <=	    less than or equal to
+            ?	    ternary operator
+
+    -->
+    <button class="btn_sytle">Start machine</button>
+    <p>The machine is stopped.</p>
+
+  </body>
+
+  <script>
+    const btn = document.querySelector('button');
+    const txt = document.querySelector('p');
+
+    btn.addEventListener('click', updateBtn);
+
+    function updateBtn() {
+      if(btn.textContent === 'Start machine') {  //Comparison Operators
+        btn.textContent = 'Stop machine';
+        txt.textContent = 'The machine has started...';
+      } else {
+        btn.textContent = 'Start machine';
+        txt.textContent = 'The machine is stopped!';
+      }
+    }
+  </script>
+  
+</html>

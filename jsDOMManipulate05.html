@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+    <title>Employee Bonus example</title>
+    <style>
+      label {
+        color: darkslategrey;
+        font-size: 40px;
+      }
+      p {
+        color: darkblue;
+        font-size: 30px;
+      }  
+      input[type=checkbox] {
+          width: 25px;
+          height: 25px;
+      }
+
+  </style>
+  </head>
+  <body>
+    <label for="shopping-check">Is the employee consistently exceeds expectations ? </label>
+    <input type="checkbox" id="shopping-check">
+
+    <p></p>
+
+    <script>
+      const checkBox = document.querySelector('input'); // <input type="checkbox" id="shopping-check">
+      const para = document.querySelector('p'); // <p></p>
+      let incrementDone = false; // Boolean DataType (incrementDone) set to false
+
+      checkBox.addEventListener('change', () => {
+        checkBox.disabled = true;
+        incrementDone = true; // Boolean DataType (incrementDone) set to true
+        updateAllowance();
+      });
+
+      function updateAllowance() {
+        let empAllowance;
+        if (incrementDone === true) {
+          empAllowance = 6000;
+        } else {
+          empAllowance = 3000;
+        }
+
+        para.textContent = `Employee has earned a bonus of \₹ ${empAllowance} this week.`;
+      }
+
+      updateAllowance();
+    </script>
+  </body>
+</html>

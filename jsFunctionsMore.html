@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+    <!-- 
+    Skillzam - Learn without limits
+    Email: info@skillzam.com
+    Phone: +91-80500-80399
+    Web: www.skillzam.com
+    -->
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+    <title>More on JavaScript Functions</title>
+  </head>  
+  <style>
+    h2 {
+      font-size: 80px;
+    }
+    p {
+      font-size: 40px;
+    }
+  </style>
+  
+<body>
+    <!--
+      More on JavaScript Functions
+    -->
+    <h2>More on JavaScript Functions</h2>
+
+
+    <script>
+
+        // /************************************************/
+        // // JavaScript Function Lexical Scope
+        // // Cricket Team India scored in WorldCup
+        // //
+        // function indiaWorldCup() {
+        //     const runScored = [317,350,322,301];
+        //     function announceScores() {
+        //         let matchNum = 1;
+        //         function scoreBoard() {
+        //             for (let run of runScored) {
+        //                 console.log(`${matchNum} : TEAM INDIA SCORED ${run} RUNS`)
+        //                 matchNum++;
+        //             }
+        //         }
+        //         scoreBoard();
+        //     }
+        //     announceScores();
+        // }
+        // indiaWorldCup();
+
+
+        // /************************************************/
+        // // JavaScript Function Expression Example
+        // // Get the area of a rectangle 
+        // const getArea = function(width, height) {
+        //   return width * height;
+        // };
+        // let x= 10; let y =5;
+        // getArea(y, x)
+        // console.log(); 
+
+
+        // /************************************************/
+        // // JavaScript Functions as Arguments Example
+        // // A function passed as an argument 
+        // function tryAgain (printFunc) {
+        //   printFunc();
+        //   printFunc();
+        //   printFunc();
+        // }
+        // function message () {
+        //   console.log("Hurray! we have won the match");
+        // }
+        // tryAgain(message);  // function passed as an argument 
+
+
+        // /************************************************/
+        // // JavaScript Functions as Arguments Example
+        // // Is the number between 1 and 100 
+        // function isBetween(min, max) {
+        //     return function (val) {
+        //         return val >= min && val <= max;
+        //     }
+        // }        
+        // const evalNum = isBetween(1,100);
+        // console.log(`Is the number between 1 and 100 ?: ${evalNum(-1)}`);
+
+        // /************************************************/
+        // // JavaScript Arrow Function Example
+        // // Square of a number 
+        // function sqNum (num) {
+        //   return num*num;
+        // }
+        // console.log(sqNum(4));
+
+        // let sqNum = function (num) { 
+        //   return num*num;
+        // }
+        // console.log(sqNum(4));
+
+        // let SqNum =  num => num * num;
+        // console.log(SqNum(4)); 
+      
+
+        /************************************************/
+        // JavaScript Arrow Function Example
+        // Multiplication table
+          
+        // const num = parseInt(prompt("Enter the number: "));
+          let number = 4;
+
+          let tables = num => {
+            let result;
+            for (let i=1; i<=10; i++ ) {
+              result = num * i;
+              console.log(` ${num} * ${i} = ${result}`);
+            }
+          }
+          tables(number);
+
+    </script>   
+
+</body>
+</html>
+
+

@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+    <!-- 
+    Skillzam - Learn without limits
+    Email: info@skillzam.com
+    Phone: +91-80500-80399
+    Web: www.skillzam.com
+    -->
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+    <title>JavaScript spread Operator (...)</title>
+  </head>  
+  <style>
+    h2 {
+      font-size: 80px;
+    }
+    p {
+      font-size: 40px;
+    }
+  </style>
+  
+<body>
+    <!--
+        JavaScript spread Operator (...)
+    -->
+
+    <h2>JavaScript spread Operator (...)</h2>
+
+
+    <script>
+
+
+        // /************************************************/
+        // // JavaScript spread Operator (...)
+        // // Example of spread in functions 
+        // const runScored = [123,56,101,37,56,112,65,12,89,210]; // array of number
+        // console.log(Math.max(runScored)) //NaN
+        // console.log(Math.max(...runScored)) //210
+
+        
+        // /************************************************/
+        // // JavaScript spread Operator (...)
+        // // Example of spread in Arrays concatenation
+        // const flagIndia = ['Orange', 'White', 'Green']; // array of strings
+        // const flagGermany = ['Black', 'Red', 'Yellow'];
+        // const allFlagColors = [...flagIndia, ...flagGermany];
+        // // ['Orange', 'White', 'Green','Black', 'Red', 'Yellow']
+        // console.log(allFlagColors);
+
+
+        // /************************************************/
+        // // JavaScript spread Operator (...)
+        // // Example of spread in Objects (will override the values of same keys)
+        // const messi = { country: 'Argentina', club: 'PSG' };
+        // const ronaldo = { country: 'Portugal', club: 'MANU' };
+        // const goat = { ...ronaldo, ...messi };
+        // console.log(goat);
+
+
+        // /************************************************/
+        // // JavaScript spread Operator (...)
+        // // Example of spread in Objects by adding new key-value pairs
+        // const registerUser = {
+        //     email: 'example@skillzam.com',
+        //     password: 'Pa$$w0rd',
+        //     username: 'example123'
+        // }
+        // const newUser = { ...registerUser, uid: 1234, isAdmin: false }
+        // console.log(newUser);
+
+    </script>   
+
+</body>
+</html>
+
+
